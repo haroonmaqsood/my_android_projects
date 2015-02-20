@@ -114,6 +114,13 @@ public class ItemDetailsActivity extends Activity implements OnClickListener {
 						+totalQty.getText().toString());
 				Toast.makeText(getApplicationContext(), "added to basket", Toast.LENGTH_LONG).show();
 				isadded = true;
+				Basket.toRem = null == Basket.toRem?new ArrayList<String>():Basket.toRem;
+				Basket.added = null == Basket.added?new ArrayList<String>():Basket.added;
+				if(Basket.toRem.contains(MainActivity.userInfoRecieved.getString(Constants.BUNDLE_KEY_DISH_NAME).replaceAll(" ", "").trim().toString())){
+					Basket.toRem.remove(MainActivity.userInfoRecieved.getString(Constants.BUNDLE_KEY_DISH_NAME).replaceAll(" ", "").trim().toString());
+					Basket.added.remove(MainActivity.userInfoRecieved.getString(Constants.BUNDLE_KEY_DISH_NAME).replaceAll(" ", "").trim().toString());
+					
+				}
 			}else {
 				Toast.makeText(getApplicationContext(), "already added to basket", Toast.LENGTH_LONG).show();
 			}

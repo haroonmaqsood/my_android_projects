@@ -35,19 +35,19 @@ public class Basket extends Activity {
 	TextView tvTblNo = null;
 	TextView tvPrice = null;
 	TextView tvSubtotal = null;
-	TextView tvSubtotalv = null;
+	static TextView tvSubtotalv = null;
 
 	TextView tvDiscount = null;
 	TextView tvDiscountv = null;
 	TextView tvTotal = null;
-	TextView tvTotalv = null;
+	static TextView tvTotalv = null;
 
 	EditText etTableNo = null;
 	
 	EditText etDiscount = null;
 
 	double subTotal = 0;
-	double total = 0;
+	static double total = 0;
 	double tax = 0;
 	double discount = 0;
 	double orgTotal = 0;
@@ -233,12 +233,13 @@ public class Basket extends Activity {
 				Map<String, String> map = new HashMap<String, String>(1);
 				map.put("name", da[1]);
 				map.put("price", da[2]);
-				total = total + Double.parseDouble(da[2]);
+				
 				map.put("qty", da[3]);
 				
 					if(!Basket.toRem.contains(da[1]) && !added.contains(da[1])){
 						added.add(da[1]);
 						listData.add(map);
+						total = total + Double.parseDouble(da[2]);
 						basketItems.add(it);
 				}
 
@@ -258,13 +259,14 @@ public class Basket extends Activity {
 				Map<String, String> map = new HashMap<String, String>(1);
 				map.put("name", da[4]);
 				map.put("price", da[3]);
-				total = total + Integer.parseInt(da[3]);
+				
 				map.put("qty", da[2]);
 
 				if(!Basket.toRem.contains(da[4])&& !added.contains(da[4]) ){
 					listData.add(map);
 					added.add(da[4]);
 					basketItems.add(it);
+					total = total + Integer.parseInt(da[3]);
 				}
 			}
 		}

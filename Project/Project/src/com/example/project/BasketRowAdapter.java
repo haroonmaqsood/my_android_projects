@@ -34,7 +34,7 @@ public class BasketRowAdapter extends SimpleAdapter{
 	}
 	
 	@Override
-	public View getView(final int position, View convertView, final ViewGroup parent) {
+	public View getView(final int position, final View convertView, final ViewGroup parent) {
 		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		    final View rowView = inflater.inflate(R.layout.basket_row_layout, parent, false);
 		    TextView tvQty = (TextView)rowView.findViewById(R.id.tvQty);
@@ -59,6 +59,10 @@ public class BasketRowAdapter extends SimpleAdapter{
 						// TODO Auto-generated method stub
 						if(!Basket.toRem.contains(Basket.listData.get(position).get("name"))){
 							Basket.toRem.add(Basket.listData.get(position).get("name"));
+							Basket.total = Basket.total-Double.parseDouble(Basket.listData.get(position).get("price"));
+							
+							Basket.tvTotalv.setText(String.valueOf(Basket.total));
+							Basket.tvSubtotalv.setText(String.valueOf(Basket.total));
 						}
 						
 						Basket.listData.remove(position);

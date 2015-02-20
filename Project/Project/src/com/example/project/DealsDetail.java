@@ -101,6 +101,12 @@ public class DealsDetail extends Activity implements OnClickListener {
 				sb.append(tvDealName.getText().toString().replaceAll(" ","").trim()+" ");
 				sb.append(hidnstat.getText().toString().replaceAll(" ","").trim());
 				dealsList.add(sb.toString());
+				Basket.toRem = null == Basket.toRem?new ArrayList<String>():Basket.toRem;
+				Basket.added = null == Basket.added?new ArrayList<String>():Basket.added;
+				if(Basket.toRem.contains(MainActivity.userInfoRecieved.getString(Constants.BUNDLE_KEY_DISH_NAME).replaceAll(" ", "").trim().toString())){
+					Basket.toRem.remove(MainActivity.userInfoRecieved.getString(Constants.BUNDLE_KEY_DISH_NAME).replaceAll(" ", "").trim().toString());
+					Basket.added.remove(MainActivity.userInfoRecieved.getString(Constants.BUNDLE_KEY_DISH_NAME).replaceAll(" ", "").trim().toString());
+				}
 				MainActivity.userInfoRecieved.putStringArrayList(Constants.BUNDLE_KEY_DEALS_SELECTED, dealsList);
 				isInserted = true;
 				Toast.makeText(getApplicationContext(), "deal added to basket", Toast.LENGTH_LONG).show();
