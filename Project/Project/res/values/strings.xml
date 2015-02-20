@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AROMS</string>
+    <string name="Screen_title0">Register</string>
+    <string name="screen_name0">Home</string>
+    <string name="Screen_title1">OrderStatus</string>
+    <string name="Screen_title2">Deals</string>
+    <string name="screen_name">AROMS</string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="screen_name1">Menu</string>
+    <string name="Logout"><u>Logout</u>..</string>
+    <string name="test1">This is activity 1</string>
+   <string name="test2">This is activity 2</string>
+   <string name="go2">Go to activity 2</string>
+   <string name="hello">Hello World, MainActivity!</string>
+   
+   
+
+</resources>

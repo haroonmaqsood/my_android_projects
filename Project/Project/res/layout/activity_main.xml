@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FF8C00"
+     android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btndeals"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="50"
+            android:text="Deals" />
+
+        <Button
+            android:id="@+id/btnmenu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btndeals"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="50"
+            android:text="Menu" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/logoutTextview"
+            android:layout_marginTop="26dp"
+            android:text="Hi! Mr.Waiter"
+            android:textSize="20dip"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/logoutTextview"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="24dp"
+            android:text="Logout"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/btnbasket"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btndeals"
+            android:layout_marginTop="33dp"
+            android:layout_weight="50"
+            android:text="Basket" />
+
+        <Button
+            android:id="@+id/btnOrdrStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btnbasket"
+            android:layout_marginTop="17dp"
+            android:text="Order Status" />
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FF8C00">
+     <!-- Editext for Search -->
+  
+    <!-- List View -->
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="172dp"
+        android:background="@android:color/white" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tvTblNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Table No"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/etTableNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvTblNo"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSearch"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etTableNo"
+        android:text="search" />
+
+    <Button
+        android:id="@+id/btmnPayBill"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etTableNo"
+        android:layout_toRightOf="@+id/btnSearch"
+        android:text="pay bill" />
+
+    <Button
+        android:id="@+id/btnCnclOrder"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btmnPayBill"
+        android:layout_alignBottom="@+id/btmnPayBill"
+        android:layout_toRightOf="@+id/btmnPayBill"
+        android:text="Cancel" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnSearch"
+        android:layout_marginTop="47dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvName"
+        android:layout_toRightOf="@+id/tvTblNo"
+        android:text="QTY" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_toLeftOf="@+id/btnCnclOrder"
+        android:text="Price" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/btnCnclOrder"
+        android:layout_marginLeft="30dp"
+        android:text="ETime" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignRight="@+id/etTableNo"
+        android:text="Status" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignParentRight="true"
+        android:text="Action" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnCnclOrder"
+        android:layout_alignBottom="@+id/btnCnclOrder"
+        android:layout_toLeftOf="@+id/textView5"
+        android:text="Total :" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView6"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

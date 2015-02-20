@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FF8C00"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnDelete"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Delete" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Logout" />
+
+    <EditText
+        android:id="@+id/etTableNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTblNo"
+        android:layout_alignBottom="@+id/tvTblNo"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/tvTblNo"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnAddMoreItems"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="(+)Add More Items" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAddMoreItems"
+        android:layout_centerHorizontal="true"
+        android:text="Price"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/tvSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPrice"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/btnAddMoreItems"
+        android:text="SubTotal : "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/tvSubtotalv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSubtotal"
+        android:layout_alignBottom="@+id/tvSubtotal"
+        android:layout_alignRight="@+id/tvPrice"
+        android:text="subtotalvalue"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/tvDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvSubtotal"
+        android:layout_below="@+id/tvSubtotal"
+        android:layout_marginTop="16dp"
+        android:text="Discount : "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvDiscount"
+        android:layout_below="@+id/tvDiscount"
+        android:layout_marginTop="15dp"
+        android:text="Total  : "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/tvTotalv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTotal"
+        android:layout_alignBottom="@+id/tvTotal"
+        android:layout_alignLeft="@+id/tvSubtotalv"
+        android:text="totalvalue"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnAddMoreItems"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etTableNo"
+        android:clickable="false"
+        android:focusable="false" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btnInserOrder"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTotalv"
+        android:layout_centerHorizontal="true"
+        android:text="Insert Order" />
+
+    <EditText
+        android:id="@+id/etDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSubtotal"
+        android:layout_toRightOf="@+id/tvDiscount"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvTblNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDelete"
+        android:layout_marginTop="20dp"
+        android:text="Table No :"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

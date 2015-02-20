@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FF8C00" >
+
+   
+
+    <Button
+        android:id="@+id/btnLogoutFromDD"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Logout" />
+
+    <TextView
+        android:id="@+id/tvDealDetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="Deal Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/ivDDDPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDealDetailName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/biryani" />
+
+    <TextView
+        android:id="@+id/tvDDDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ivDDDPic"
+        android:text="Description : "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvDDQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvDDDescription"
+        android:layout_marginTop="23dp"
+        android:text="Quantity : "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnIncDealQty"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDDQty"
+        android:layout_alignBottom="@+id/tvDDQty"
+        android:layout_toLeftOf="@+id/ivDDDPic"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/btnDecDealQty"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnIncDealQty"
+        android:layout_alignBottom="@+id/btnIncDealQty"
+        android:layout_alignParentRight="true"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/tvDealTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnIncDealQty"
+        android:layout_marginTop="36dp"
+        android:text="Total : "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvDealTotalVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDealTotal"
+        android:layout_alignBottom="@+id/tvDealTotal"
+        android:layout_alignRight="@+id/btnIncDealQty"
+        android:text="Total value"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+   
+
+    <TextView
+        android:id="@+id/tvDealQtyV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnDecDealQty"
+        android:layout_alignBottom="@+id/btnDecDealQty"
+        android:layout_toLeftOf="@+id/btnLogoutFromDD"
+        android:text="Deal Quantity"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/btnADTB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvDealDetailName"
+        android:layout_below="@+id/tvDealTotal"
+        android:layout_marginTop="46dp"
+        android:text="Add To Basket" />
+
+    <TextView
+        android:id="@+id/tvHidnDealSts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnADTB"
+        android:text="Small Text"
+        android:visibility="invisible"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/tvDDDescVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvDDQty"
+        android:layout_centerHorizontal="true"
+        android:text="Description value" />
+
+</RelativeLayout>
